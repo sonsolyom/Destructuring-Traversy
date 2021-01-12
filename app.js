@@ -17,11 +17,33 @@ const [person1, person2, person3] = people;
 console.log(person1, person2, person3); */
 
 //Parse array returned from function
-function getPeople() {
+/* function getPeople() {
   return ['John', 'Beth', 'Mike'];
 }
 
 let person1, person2, person3;
 [person1, person2, person3] = getPeople();
 
-console.log(person1, person2, person3);
+console.log(person1, person2, person3); */
+
+//Object destructuring
+const person = {
+  name: 'John',
+  age: 32,
+  city: 'Miami',
+  gender: 'male',
+  sayHello: function() {
+    console.log('Hello');
+  }
+}
+
+//OLD ES5
+/* const name = person.name,
+      age = person.age,
+      city = person.city; */
+
+//NEW ES6
+const { name, age, city, sayHello } = person;
+console.log(name, age, city);
+
+sayHello();
